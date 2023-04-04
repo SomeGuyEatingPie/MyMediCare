@@ -1,36 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:layout_height="fill_parent">
+
     <TableRow>
+
         <TextView
-            android:text="First Name:"
-            android:width="120dp" />
-        <EditText
-            android:id="@+id/txtFirstName"
-            android:width="200dp" />
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:text="Last Name:"
-            android:width="120dp" />
+            android:width="120dp"
+            android:text="First Name:" />
 
         <EditText
-            android:id="@+id/txtLastName"
-            android:layout_width="290dp" />
+            android:id="@+id/txtFirstName"
+            android:width="290dp" />
     </TableRow>
+
     <TableRow>
-        <TextView
-            android:text="Date of Birth:"
-            android:width="120dp" />
-        <DatePicker
-            android:id="@+id/txtUserName"
-            android:width="200dp" />
+
+        <TextView android:text="Last Name:" />
+
+        <EditText android:id="@+id/txtLastName" />
     </TableRow>
-        <Button
-            android:id="@+id/buttonSignIn"
-            android:text="Log In" />
+
+    <TableRow>
+
+        <TextView android:text="Date of Birth:" />
+
+        <EditText
+            android:id="@+id/txtDOB"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
     </TableRow>
+
+    <TableRow>
+
+        <TextView android:text="Gender:" />
+
+        <Spinner android:id="@+id/spinGender" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView android:text="Doctor:" />
+
+        <EditText
+            android:id="@+id/txtDoctor"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/buttonSelectGP"
+        style="@style/buttonFullWidth"
+        android:text="Select GP" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        style="@style/buttonFullWidth"
+        android:text="Save Changes" />
+
 </TableLayout>

@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="buttonFullWidth">
+
+        <item name="android:layout_marginLeft"> 50dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+
+    </style>
+
+    <style name="styleButton">
+        <item name="android:text"></item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginLeft"> 15dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:layout_weight">.25</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+
 </resources>

@@ -16,7 +16,7 @@
             android:layout_marginTop="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginBottom="50dp"
-            android:src="@drawable/MMC_icon" />
+            android:src="@drawable/mymedicare" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -30,36 +30,25 @@
             android:text="Welcome Back" />
 
     <Button
+        style="@style/buttonFullWidth"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="15dp"/>
+        android:text="New Reading"
+        />
     <Button
+        style="@style/buttonFullWidth"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="15dp"/>
+        android:text="View Readings" />
     <Button
+        style="@style/buttonFullWidth"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="15dp"/>
+        android:text="Account" />
     <Button
+        style="@style/buttonFullWidth"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="75dp"/>
+        android:text="Settings" />
 
 </LinearLayout>

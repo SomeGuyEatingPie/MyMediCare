@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MyMediCare</string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+        <item>Prefer not to say</item>
+    </string-array>
+
+    <color name="blue">#0099CC</color>
+    <color name="green">#99CC00</color>
+    <color name="yellow">#FFBB33</color>
+    <color name="orange">#FF8800</color>
+    <color name="purple">#9933CC</color>
+    <color name="red">#CC0000</color>
+
 </resources>

@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class new_reading extends AppCompatActivity {
+public class NewReading extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
