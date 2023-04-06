@@ -9,14 +9,17 @@
     <TableRow>
 
         <Button
+            android:id="@+id/btnStyleBlue"
             style="@style/styleButton"
             android:backgroundTint="@color/blue"/>
 
         <Button
+            android:id="@+id/btnStyleGreen"
             style="@style/styleButton"
             android:backgroundTint="@color/green"/>
 
         <Button
+            android:id="@+id/btnStyleYellow"
             style="@style/styleButton"
             android:backgroundTint="@color/yellow"/>
 
@@ -24,14 +27,17 @@
     <TableRow>
 
         <Button
+            android:id="@+id/btnStyleOrange"
             style="@style/styleButton"
             android:backgroundTint="@color/orange"/>
 
         <Button
+            android:id="@+id/btnStylePurple"
             style="@style/styleButton"
             android:backgroundTint="@color/purple"/>
 
         <Button
+            android:id="@+id/btnStyleRed"
             style="@style/styleButton"
             android:backgroundTint="@color/red"/>
 

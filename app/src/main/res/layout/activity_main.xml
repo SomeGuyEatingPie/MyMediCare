@@ -13,39 +13,44 @@
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="50dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="30dp"
             android:src="@drawable/mymedicare" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:textSize="20dp"
-            android:text="Welcome Back" />
+            android:text="@string/WelcomeMessage" />
 
     <Button
+        android:id="@+id/btnNewReading"
         style="@style/buttonFullWidth"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="New Reading"
-        />
+        android:text="New Reading" />
+
     <Button
+        android:id="@+id/btnViewReading"
         style="@style/buttonFullWidth"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="View Readings" />
+
     <Button
+        android:id="@+id/btnAccount"
         style="@style/buttonFullWidth"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Account" />
+
     <Button
+        android:id="@+id/btnSettings"
         style="@style/buttonFullWidth"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

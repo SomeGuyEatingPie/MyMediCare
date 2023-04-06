@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.MyMediCare" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/dark_green</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -13,4 +13,47 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="AppGreenTheme" parent="Theme.MyMediCare">
+
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/dark_green</item>
+
+    </style>
+
+    <style name="AppBlueTheme" parent="Theme.MyMediCare">
+
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/dark_blue</item>
+
+    </style>
+
+    <style name="AppyellowTheme." parent="Theme.MyMediCare">
+
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/dark_yellow</item>
+
+    </style>
+
+    <style name="AppOrangeTheme" parent="Theme.MyMediCare">
+
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/dark_orange</item>
+
+    </style>
+
+    <style name="AppPurpleTheme." parent="Theme.MyMediCare">
+
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryVariant">@color/dark_purple</item>
+
+    </style>
+
+    <style name="AppRedTheme" parent="Theme.MyMediCare">
+
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryVariant">@color/dark_red</item>
+
+    </style>
+
 </resources>

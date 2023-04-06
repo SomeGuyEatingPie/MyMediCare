@@ -4,7 +4,7 @@
     android:layout_height="fill_parent">
 
     <Button
-        android:id="@+id/buttonChangeUnit"
+        android:id="@+id/btnChangeUnit"
         style="@style/buttonFullWidth"
         android:text="Change Units" />
 
@@ -19,7 +19,8 @@
             android:width="250dp" />
 
         <TextView
-            android:text="(°C)" />
+            android:id="@+id/txtUnit"
+            android:text="@string/UnitC" />
     </TableRow>
 
     <TableRow>
@@ -43,7 +44,7 @@
     </TableRow>
 
     <Button
-        android:id="@+id/buttonSave"
+        android:id="@+id/btnSave"
         style="@style/buttonFullWidth"
         android:text="Save Changes" />
 
