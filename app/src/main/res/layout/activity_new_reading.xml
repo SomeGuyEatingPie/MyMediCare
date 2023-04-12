@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:stretchColumns="1">
 
-    <Button
-        android:id="@+id/btnChangeUnit"
-        style="@style/buttonFullWidth"
-        android:text="Change Units" />
+    <TableRow>
+
+        <Button
+            android:id="@+id/btnChangeUnit"
+            style="@style/buttonFullWidth"
+            android:text="Change Units"
+            android:layout_span="3"/>
+
+    </TableRow>
 
     <TableRow>
 
         <TextView
-            android:width="120dp"
+            android:width="100dp"
+            android:gravity="right"
             android:text="Temperature:" />
 
         <EditText
@@ -26,20 +33,53 @@
     <TableRow>
 
         <TextView
-            android:text="Blood Pressure:" />
-
-        <EditText
-            android:id="@+id/txtBP" />
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:layout_gravity="center"
+            android:text="Blood Pressure"
+            android:layout_span="3" />
 
     </TableRow>
 
     <TableRow>
 
         <TextView
+            android:gravity="right"
+            android:text="High:" />
+
+        <EditText
+            android:id="@+id/txtBPLow"
+            android:layout_span="2"/>
+
+    </TableRow>
+    <TableRow>
+
+        <TextView
+            android:gravity="right"
+            android:text="Low:" />
+
+        <EditText
+            android:id="@+id/txtBPHigh"
+            android:layout_span="2" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginTop="20dp"
             android:text="Heart Rate:" />
 
         <EditText
-            android:id="@+id/txtHR" />
+            android:id="@+id/txtHR"
+            android:layout_marginTop="20dp"
+            android:layout_span="2"/>
 
     </TableRow>
 

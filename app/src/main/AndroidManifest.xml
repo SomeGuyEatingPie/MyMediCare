@@ -12,6 +12,9 @@
         android:theme="@style/Theme.MyMediCare"
         tools:targetApi="31">
         <activity
+            android:name=".DoctorPicker"
+            android:exported="false" />
+        <activity
             android:name=".ViewReadings"
             android:exported="false" />
         <activity

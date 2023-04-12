@@ -28,7 +28,7 @@
 
     </style>
 
-    <style name="AppyellowTheme." parent="Theme.MyMediCare">
+    <style name="AppYellowTheme" parent="Theme.MyMediCare">
 
         <item name="colorPrimary">@color/yellow</item>
         <item name="colorPrimaryVariant">@color/dark_yellow</item>

@@ -4,6 +4,7 @@
     <string name="UnitC">(°C)</string>
     <string name="UnitF">(°F)</string>
     <string name="saved_metric_key">metric</string>
+    <string name="saved_theme_key">theme</string>
 
     <string-array name="gender_array">
         <item>Male</item>

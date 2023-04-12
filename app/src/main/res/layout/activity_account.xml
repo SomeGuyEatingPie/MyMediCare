@@ -54,7 +54,7 @@
         android:text="Select GP" />
 
     <Button
-        android:id="@+id/buttonSave"
+        android:id="@+id/btnSave"
         style="@style/buttonFullWidth"
         android:text="Save Changes" />
 
