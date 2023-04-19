@@ -9,7 +9,7 @@
         <Button
             android:id="@+id/btnChangeUnit"
             style="@style/buttonFullWidth"
-            android:text="Change Units"
+            android:text="@string/units_label"
             android:layout_span="3"/>
 
     </TableRow>
@@ -18,12 +18,13 @@
 
         <TextView
             android:width="100dp"
-            android:gravity="right"
-            android:text="Temperature:" />
+            style="@style/textFieldLabel"
+            android:text="@string/temp_label" />
 
         <EditText
             android:id="@+id/txtTemp"
-            android:width="250dp" />
+            android:width="250dp"
+            android:inputType="numberDecimal"/>
 
         <TextView
             android:id="@+id/txtUnit"
@@ -39,9 +40,9 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="20dp"
-            android:textSize="15dp"
-            android:layout_gravity="center"
-            android:text="Blood Pressure"
+            android:textSize="15sp"
+
+            android:text="@string/bp_label"
             android:layout_span="3" />
 
     </TableRow>
@@ -49,22 +50,24 @@
     <TableRow>
 
         <TextView
-            android:gravity="right"
-            android:text="High:" />
+            style="@style/textFieldLabel"
+            android:text="@string/bp_high_label" />
 
         <EditText
             android:id="@+id/txtBPLow"
+            android:inputType="number"
             android:layout_span="2"/>
 
     </TableRow>
     <TableRow>
 
         <TextView
-            android:gravity="right"
-            android:text="Low:" />
+            style="@style/textFieldLabel"
+            android:text="@string/bp_low_label" />
 
         <EditText
             android:id="@+id/txtBPHigh"
+            android:inputType="number"
             android:layout_span="2" />
 
     </TableRow>
@@ -72,13 +75,12 @@
     <TableRow>
 
         <TextView
-            android:gravity="right"
-            android:layout_marginTop="20dp"
-            android:text="Heart Rate:" />
+            style="@style/textFieldLabel"
+            android:text="@string/hr_label" />
 
         <EditText
             android:id="@+id/txtHR"
-            android:layout_marginTop="20dp"
+            android:inputType="number"
             android:layout_span="2"/>
 
     </TableRow>
@@ -86,6 +88,6 @@
     <Button
         android:id="@+id/btnSave"
         style="@style/buttonFullWidth"
-        android:text="Save Changes" />
+        android:text="@string/save_reading_label" />
 
 </TableLayout>

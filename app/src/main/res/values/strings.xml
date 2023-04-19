@@ -1,10 +1,33 @@
 <resources>
     <string name="app_name">MyMediCare</string>
-    <string name="WelcomeMessage">Welcome Back</string>
+    <string name="WelcomeMessage">Welcome Back </string>
     <string name="UnitC">(°C)</string>
     <string name="UnitF">(°F)</string>
     <string name="saved_metric_key">metric</string>
     <string name="saved_theme_key">theme</string>
+    <string name="saved_user_firstname_key">firstName</string>
+    <string name="saved_user_lastname_key">lastName</string>
+    <string name="saved_user_dob_key">dob</string>
+    <string name="saved_user_gender_key">gender</string>
+    <string name="saved_dr_name_key">drName</string>
+    <string name="saved_dr_number_key">drNumber</string>
+    <string name="medicare_prefs">preferences</string>
+    <string name="temp_label">Temperature</string>
+    <string name="units_label">Change Units</string>
+    <string name="bp_label">Blood Pressure</string>
+    <string name="bp_high_label">High:</string>
+    <string name="bp_low_label">Low:</string>
+    <string name="hr_label">Heart Rate:</string>
+    <string name="save_reading_label">Save Changes</string>
+    <string name="saved_sms_default_message">[drName]. This is an automated message from a MyMediCare app.
+        \n[userFirstName] [userLastName] has submitted a high risk reading.
+        \nThe reading is as follows:
+        \nTemperature: [temp]
+        \nBlood pressure Low: [bpLow] High: [bpHigh]
+        \nHeart Rate: [hr]
+        \n
+        \nYou are receiving this message as [userFirstName] has selected you as their GP/nurse within the app
+        \n If you feel you have been sent this message in error. Please inform the sender by using this number.</string>
 
     <string-array name="gender_array">
         <item>Male</item>

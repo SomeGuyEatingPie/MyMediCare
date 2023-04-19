@@ -6,56 +6,113 @@
     <TableRow>
 
         <TextView
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="40dp"
+            android:textSize="20dp"
+            android:text="Your Details"
+            android:layout_span="2" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
             android:width="120dp"
+            style="@style/textFieldLabel"
             android:text="First Name:" />
 
         <EditText
             android:id="@+id/txtFirstName"
-            android:width="290dp" />
+            android:width="290dp"
+            android:inputType="text"/>
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_marginTop="20dp">
 
-        <TextView android:text="Last Name:" />
+        <TextView
+            style="@style/textFieldLabel"
+            android:text="Last Name:" />
 
-        <EditText android:id="@+id/txtLastName" />
+        <EditText
+            android:id="@+id/txtLastName"
+            android:inputType="text"/>
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:layout_marginTop="20dp">
 
-        <TextView android:text="Date of Birth:" />
+        <TextView
+            style="@style/textFieldLabel"
+            android:text="Date of Birth:" />
 
         <EditText
             android:id="@+id/txtDOB"
+            android:inputType="date"
+            android:clickable="false"
+            android:cursorVisible="false"
             android:focusable="false"
-            android:focusableInTouchMode="false" />
+            android:focusableInTouchMode="false"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="20dp">
+
+        <TextView
+            style="@style/textFieldLabel"
+            android:text="Gender:" />
+
+        <Spinner
+            android:id="@+id/spinGender" />
     </TableRow>
 
     <TableRow>
 
-        <TextView android:text="Gender:" />
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp"
+            android:text="Doctor's Details"
+            android:layout_span="2" />
 
-        <Spinner android:id="@+id/spinGender" />
     </TableRow>
 
     <TableRow>
 
-        <TextView android:text="Doctor:" />
+        <TextView
+            style="@style/textFieldLabel"
+            android:text="Doctor's Name:" />
 
         <EditText
-            android:id="@+id/txtDoctor"
-            android:focusable="false"
-            android:focusableInTouchMode="false" />
+            android:id="@+id/txtDrName"/>
     </TableRow>
 
-    <Button
-        android:id="@+id/buttonSelectGP"
-        style="@style/buttonFullWidth"
-        android:text="Select GP" />
+    <TableRow
+        android:layout_marginTop="20dp">
 
-    <Button
-        android:id="@+id/btnSave"
-        style="@style/buttonFullWidth"
-        android:text="Save Changes" />
+        <TextView
+            style="@style/textFieldLabel"
+            android:text="Doctor's Phone:" />
+
+        <EditText
+            android:id="@+id/txtDrNumber"
+            android:inputType="number"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="20dp">
+        <Button
+            android:layout_span="2"
+            android:id="@+id/btnSave"
+            style="@style/buttonFullWidth"
+            android:text="Save Changes" />
+    </TableRow>
 
 </TableLayout>

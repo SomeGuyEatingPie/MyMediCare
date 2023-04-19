@@ -44,12 +44,12 @@
     </TableRow>
 
     <Button
-        android:id="@+id/buttonDeleteAccount"
+        android:id="@+id/btnDeleteAccount"
         style="@style/buttonFullWidth"
         android:text="Delete Account" />
 
     <Button
-        android:id="@+id/buttonDeleteReadings"
+        android:id="@+id/btnDeleteReadings"
         style="@style/buttonFullWidth"
         android:text="Delete all readings" />
 

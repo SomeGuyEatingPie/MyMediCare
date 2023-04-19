@@ -2,6 +2,7 @@ package com.example.mymedicare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,7 +17,7 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.medicare_prefs), Context.MODE_PRIVATE);
         int defaultThemeValue = getResources().getInteger(R.integer.saved_theme_default_key);
         int themeVal = sharedPref.getInt(getString(R.string.saved_theme_key), defaultThemeValue);
 
@@ -52,5 +53,17 @@ public class Settings extends AppCompatActivity {
                 ; }
         });
 
+        Button btnDelAcc = (Button) findViewById(R.id.btnDeleteAccount);
+
+        btnDelAcc.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ApplySharedPref")
+            public void onClick(View v) {
+
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.clear();
+                editor.commit();
+
+            }
+        });
     }
 }
