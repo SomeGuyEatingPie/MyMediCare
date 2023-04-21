@@ -19,7 +19,9 @@
     <string name="bp_low_label">Low:</string>
     <string name="hr_label">Heart Rate:</string>
     <string name="save_reading_label">Save Changes</string>
-    <string name="saved_sms_default_message">[drName]. This is an automated message from a MyMediCare app.
+
+    <string name="saved_sms_default_message">
+        [drName]. This is an automated message from a MyMediCare app.
         \n[userFirstName] [userLastName] has submitted a high risk reading.
         \nThe reading is as follows:
         \nTemperature: [temp]
@@ -27,7 +29,10 @@
         \nHeart Rate: [hr]
         \n
         \nYou are receiving this message as [userFirstName] has selected you as their GP/nurse within the app
-        \n If you feel you have been sent this message in error. Please inform the sender by using this number.</string>
+        \n If you feel you have been sent this message in error. Please inform the sender by using this number.
+    </string>
+
+    <string name="submit_reading_label">Submit Reading</string>
 
     <string-array name="gender_array">
         <item>Male</item>

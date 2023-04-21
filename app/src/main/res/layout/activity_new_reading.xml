@@ -88,6 +88,6 @@
     <Button
         android:id="@+id/btnSave"
         style="@style/buttonFullWidth"
-        android:text="@string/save_reading_label" />
+        android:text="@string/submit_reading_label" />
 
 </TableLayout>

@@ -30,8 +30,11 @@ public class Account extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
+        //get the shared preferences file
         SharedPreferences sharedPref = getSharedPreferences(getString(R.string.medicare_prefs), Context.MODE_PRIVATE);
 
+        //get all the UI elements
+        //set the text value for each element to the currently saved value in shared preferences
         EditText extFirstName = (EditText)  findViewById(R.id.txtFirstName);
         extFirstName.setText( sharedPref.getString( getString( R.string.saved_user_firstname_key), ""));
         EditText extLastName = (EditText)  findViewById(R.id.txtLastName);
@@ -44,7 +47,9 @@ public class Account extends AppCompatActivity {
                 R.array.gender_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinGender.setAdapter(adapter);
+        //add items to the drop down menu
         String gender = (sharedPref.getString( getString( R.string.saved_user_gender_key), null));
+        //set the selected item to the value saved in shared prefernces
         if (gender != null) {
 
             String[] genderArray = getResources().getStringArray(R.array.gender_array);
@@ -65,6 +70,7 @@ public class Account extends AppCompatActivity {
         Button btnSave = (Button) findViewById(R.id.btnSave);
 
 
+        //open the datePickerDialog when the DoB text field is tapped
         extDoB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,18 +103,20 @@ public class Account extends AppCompatActivity {
             }
         });
 
+        //save values typed into the text fields to shared preferences
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
-                String drNumber = extDrNumber.getText().toString();
+                String drNumber = "";
 
                 try {
+                    //If Firstname, Lastname or DoB fields are empty
+                    // display an alert dialog asking user to fill them
                     if (extFirstName.getText().toString().equals("")
                             || extLastName.getText().toString().equals("")
                             || extDoB.getText().toString().equals("")) {
-
 
                         AlertDialog.Builder emptyField =
                                 new AlertDialog.Builder(Account.this)
@@ -124,11 +132,15 @@ public class Account extends AppCompatActivity {
 
                         emptyField.show();
 
-                    } else {
+                    }
 
-                        if (!phoneCheck(drNumber).equals("")) {
+                    else {
+                        //pass entered phone number to phoneCheck()
+                        drNumber = phoneCheck(extDrNumber.getText().toString());
+                        //if phoneCheck() returns anything other than an empty string
+                        if (!drNumber.equals("")) {
 
-
+                            //overwrite sharedPreferences with new values
                             SharedPreferences.Editor editor = sharedPref.edit();
                             editor.putString(getString(R.string.saved_user_firstname_key), extFirstName.getText().toString());
                             editor.putString(getString(R.string.saved_user_lastname_key), extLastName.getText().toString());
@@ -138,6 +150,7 @@ public class Account extends AppCompatActivity {
                             editor.putString(getString(R.string.saved_dr_number_key), drNumber);
                             editor.apply();
 
+                            //inform the user of successful update
                             AlertDialog.Builder success =
                                     new AlertDialog.Builder(Account.this)
                                             .setTitle("Save Successful")
@@ -157,6 +170,7 @@ public class Account extends AppCompatActivity {
                 }
                 catch(Exception e){
 
+                    //display the error message
                     MainActivity.errorMessage(Account.this, e);
 
 
@@ -166,6 +180,10 @@ public class Account extends AppCompatActivity {
         });
     }
 
+    //Method to check if phone number is valid global number
+    //Phone number passed to method as string
+    //method returns an edited number with country code added
+    //if phone number is not a valid global number empty string is returned
     private String phoneCheck(String phoneNumber) {
 
 

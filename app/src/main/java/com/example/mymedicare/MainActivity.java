@@ -16,53 +16,55 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String userName;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //get UI elements
         TextView txtWelcome = (TextView) findViewById(R.id.txtWelcome);
         Button btnNew = (Button)findViewById(R.id.btnNewReading);
         Button btnAccount = (Button)findViewById(R.id.btnAccount);
         Button btnSettings = (Button)findViewById(R.id.btnSettings);
         Button btnView = (Button)findViewById(R.id.btnViewReading);
 
+        //get shared preferences
         SharedPreferences sharedPref = getSharedPreferences(getString(R.string.medicare_prefs), Context.MODE_PRIVATE);
-        this.userName = sharedPref.getString( getString( R.string.saved_user_firstname_key), "");
 
+        //get user's first name
+        String userName = sharedPref.getString(getString(R.string.saved_user_firstname_key), "");
+
+        //if a name has been stored
         if ( !userName.equals("") ) {
 
+            //display the user's name as the welcome message
             txtWelcome.setText(getResources().getString(R.string.WelcomeMessage) + " " + userName);
 
         }
+        //if a firstname cannot be found, assume no user data is stored
         else {
 
-            if (sharedPref.getString(getString(R.string.saved_user_firstname_key), null)
-                    == null) {
+            //ask user to input user data
+            //open account activity
+            AlertDialog.Builder NoUser =
+                    new AlertDialog.Builder(MainActivity.this)
+                            .setTitle("New User Detected")
+                            .setMessage("User details could not be found. Please enter your details now.")
+                            .setPositiveButton(
+                                    "Ok",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            startActivity(new Intent(MainActivity.this, Account.class));
+                                            dialog.cancel();
+                                        }
+                                    });
 
-                AlertDialog.Builder NoUser =
-                        new AlertDialog.Builder(MainActivity.this)
-                                .setTitle("New User Detected")
-                                .setMessage("User details could not be found. Please enter your details now.")
-                                .setPositiveButton(
-                                        "Ok",
-                                        new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int id) {
-                                                startActivity(new Intent(MainActivity.this, Account.class));
-                                                dialog.cancel();
-                                            }
-                                        });
-
-                NoUser.show();
-
-            }
+            NoUser.show();
 
         }
 
-
+        //open new reading activity
         btnNew.setOnClickListener(new OnClickListener(){
 
             @Override
@@ -73,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //open view readings activity
+        //not implemented so display an alert dialog to explain to the user
         btnView.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -96,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //open account activity
         btnAccount.setOnClickListener(new OnClickListener(){
 
             @Override
@@ -105,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        //open settings activity
         btnSettings.setOnClickListener(new OnClickListener(){
 
             @Override
@@ -117,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //static method for displaying an alert dialog of an error message
     public static void errorMessage(Context context, Exception handledException) {
 
         AlertDialog.Builder error =
